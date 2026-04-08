@@ -2,7 +2,7 @@
 title: Introducing Decap CMS
 slug: introducing-decap-cms
 date: 2026-04-08T15:20:00.000+05:30
-thumbnail: /images/uploads/787ff2c5831b2ca160fe98ad5a60142520d063bd.jpg
+thumbnail: /images/uploads/blog-post6.jpg
 author: Jane Doe
 tags:
   - CMS
