@@ -1,9 +1,9 @@
 ---
-title: Services
+title: FAQ
 layout: about
 hero:
-  heading: Our Services
-  subheading: What we offer
-  bg_image: /images/uploads/taxonomy.jpg
+  heading: Frequently Asked Questions
+  subheading: Common inquiries answered
+  bg_image: /images/uploads/amsterdam.png
 ---
-We provide web development, UI/UX design, and CMS integration services.
+Here are some common questions and answers about our services and products.
