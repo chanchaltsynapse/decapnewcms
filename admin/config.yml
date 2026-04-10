@@ -6,12 +6,137 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
  
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts"
+  # 📝 Blog Posts Collection
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+
+      - { label: "Author", name: "author", widget: "string" }
+
+      - { label: "Tags", name: "tags", widget: "list" }
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Tech", "Design", "Tutorial", "News"]
+
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Meta Title", name: "meta_title", widget: "string" }
+          - { label: "Meta Description", name: "meta_description", widget: "text" }
+
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 📄 Pages Collection
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
- 
+      - { label: "Page Title", name: "title", widget: "string" }
+
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options: ["home", "about", "contact"]
+
+      - label: "Hero Section"
+        name: "hero"
+        widget: "object"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "text" }
+          - { label: "Background Image", name: "bg_image", widget: "image" }
+
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  # 🧑‍💼 Authors Collection (Reference Example)
+  - name: "authors"
+    label: "Authors"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+
+      - { label: "Profile Picture", name: "avatar", widget: "image" }
+
+      - { label: "Bio", name: "bio", widget: "text" }
+
+      - label: "Social Links"
+        name: "social"
+        widget: "list"
+        fields:
+          - { label: "Platform", name: "platform", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+
+  # 🛍️ Products Collection (Advanced Fields)
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "name", widget: "string" }
+
+      - { label: "Price", name: "price", widget: "number" }
+
+      - { label: "Product Image", name: "image", widget: "image" }
+
+      - { label: "Gallery", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+
+      - label: "In Stock"
+        name: "in_stock"
+        widget: "boolean"
+        default: true
+
+      - label: "Specifications"
+        name: "specs"
+        widget: "list"
+        fields:
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Value", name: "value", widget: "string" }
+
+      - label: "Related Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["name"]
+        value_field: "name"
+        display_fields: ["name"]
+
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  # ⚙️ Settings (Single File Example)
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General"
+        name: "general"
+        file: "content/settings/general.yml"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string" }
+
+          - { label: "Logo", name: "logo", widget: "image" }
+
+          - { label: "Homepage Featured", name: "featured_post", widget: "string" }
+
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
