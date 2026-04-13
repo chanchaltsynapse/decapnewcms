@@ -1,0 +1,15 @@
+{
+  "name": "Alice Green",
+  "avatar": "/images/uploads/dave.jpg",
+  "bio": "Alice writes tutorials on web development and Markdown.",
+  "social": [
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/alicegreen"
+    },
+    {
+      "platform": "Linkedin",
+      "url": "https://linkedin.com/in/alicegreen"
+    }
+  ]
+}
