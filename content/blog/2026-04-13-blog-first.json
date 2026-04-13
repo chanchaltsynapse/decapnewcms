@@ -1,0 +1,15 @@
+{
+  "title": "Blog First",
+  "date": "2026-04-13T15:58:00.000+05:30",
+  "thumbnail": "/images/uploads/berlin.png",
+  "author": "test",
+  "tags": [
+    "test"
+  ],
+  "category": "Tutorial",
+  "seo": {
+    "meta_title": "testt",
+    "meta_description": "testttttt"
+  },
+  "body": "test"
+}
