@@ -1,0 +1,21 @@
+{
+  "in_stock": true,
+  "name": "UI/UX Design Kit",
+  "price": 49,
+  "image": "/images/uploads/787ff2c5831b2ca160fe98ad5a60142520d063bd.jpg",
+  "gallery": [
+    "/images/uploads/blog-post6.jpg"
+  ],
+  "specs": [
+    {
+      "value": "100+",
+      "key": "Components"
+    },
+    {
+      "key": "Format",
+      "value": "Figma & Sketch"
+    }
+  ],
+  "body": "Pre-made design components for modern web projects.",
+  "author": "Alice Green"
+}
